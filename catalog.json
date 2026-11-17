@@ -184,6 +184,27 @@
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_ai_icon.png",
         "sig": "faa2b8cd86b425d79621603d55fab6afd05f6f1341ec56792bcf98bff280da455be381a6ca1f9686abd254f05758b3e4f0f86c478e253378516184180229e505"
       },
+      "version": "0.174.0",
+      "package": {
+        "url": "https://github.com/cnswk/imageall-download/releases/download/moawing-ai-0.174.0/moawing-ai-0.174.0.zip",
+        "roots": [
+          "assets",
+          "brand",
+          "chunks",
+          "icons",
+          "background.js",
+          "htmlcheck.html",
+          "manifest.json",
+          "offscreen.html",
+          "prompt-pack.json",
+          "prompts.html",
+          "sidepanel.html",
+          "THIRD_PARTY_NOTICES.txt",
+          "tistory-guard.js"
+        ],
+        "size": 1618634,
+        "sig": "1df7756da47edfb8850b21568f164a77a466b30c91a25fcc3ae528e4bfae21972164aaef024a6d1a78ba5c359993b841d8a4b502e6f207868a962ac75b2ddb09"
+      },
       "default_dir": "C:\\MoaWingExtensions\\moawing-ai"
     },
     {
