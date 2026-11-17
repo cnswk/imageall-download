@@ -54,9 +54,9 @@
     }
   ],
   "launcher": {
-    "version": "0.2.0",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.2.0/ImageAllLauncher.exe",
-    "size": 8819712,
-    "sig": "49651e649882774630ffe03a917e18a226f0c3cae546e5cab3792e56e4c40dea30c280e1b382acb0c6c1d28ffd427bd0ea2967bd6e07b3016d0d17141d61d405"
+    "version": "0.2.1",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.2.1/ImageAllLauncher.exe",
+    "size": 8821760,
+    "sig": "2baf086323df9b98c464867bd36541b9a8c04945750c95e4c63237507bc00b2968cb8f7a15d300a63f8355461685b27e5cf27d7f90f223477abd1ee2d2685e0a"
   }
 }
