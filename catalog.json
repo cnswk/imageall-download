@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.0",
-      "notes": "하루 한 번 시간 범위 안 무작위 시각, 무작위 폴더(사냥터 고르기), 켜기·끄기 단계가 들어갔어요.",
+      "version": "0.3.1",
+      "notes": "더 새 버전에서 만든 작업 파일을 열 때 깨진 파일로 여기지 않고 그대로 둬요.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.0/imageall2-0.3.0.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.1/imageall2-0.3.1.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 45922933,
-        "sig": "ff3eb6d9b52073ca2e73bc7e79524caab59f37271e8f8492adccac0a48902f4ba703f317786d2457b4e78d1bb27d261a087f11dca4de73096e093c9325e32a09"
+        "size": 45923972,
+        "sig": "c8510b14d7f9e53b94a3dcd2c0e5f4a0ddb0ad61d3da21df7d44a3ab5499aabcf5fcf59ae7e62ae1d8fb143960f07da0e9ad9d4eabfdc9c0193c07e3e329120f"
       },
       "links": [
         {
@@ -39,6 +39,11 @@
         "sig": "d98ca0c00d6b320600586642664281831f7aa77c23c72ad70c173ddb81d4fd1d0bc5ebc376221d736a8f77f36ad50b64a7d6e185abc954b03dbc8125e1c5a000"
       },
       "notices": [
+        {
+          "date": "2026-11-17",
+          "title": "ImageAll 2 0.3.1",
+          "body": "• 더 새 버전에서 만든 작업 파일을 열면 '업데이트해 주세요'만 알리고 파일은 그대로 둬요(예전엔 깨진 파일로 여겨 예전 저장본을 열었어요).\n• 작업 파일 형식이 4로 바뀌었어요. 다른 컴퓨터의 ImageAll 2도 업데이트해 주세요."
+        },
         {
           "date": "2026-11-17",
           "title": "ImageAll 2 0.3.0",
