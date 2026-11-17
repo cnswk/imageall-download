@@ -171,12 +171,59 @@
         "%ProgramFiles(x86)%\\Kakao\\KakaoTalk\\KakaoTalk.exe",
         "%ProgramFiles%\\Kakao\\KakaoTalk\\KakaoTalk.exe"
       ]
+    },
+    {
+      "id": "moawing-ai",
+      "name": "MoaWing AI",
+      "summary": "AI 글쓰기 보조 사이드패널",
+      "description": "크롬 옆에 붙는 반자동 AI 글쓰기 보조 사이드패널이에요.\n\n웹 스토어에 올리지 않은 확장 프로그램이라, 설치한 뒤 크롬에 한 번 넣어 줘야 해요(아래 '크롬에 넣는 법').",
+      "section": "확장 프로그램",
+      "kind": "extension",
+      "url": "https://github.com/cnswk/imageall-download#readme",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_ai_icon.png",
+        "sig": "faa2b8cd86b425d79621603d55fab6afd05f6f1341ec56792bcf98bff280da455be381a6ca1f9686abd254f05758b3e4f0f86c478e253378516184180229e505"
+      },
+      "default_dir": "C:\\MoaWingExtensions\\moawing-ai"
+    },
+    {
+      "id": "suno-lyrics",
+      "name": "Suno 가사 다운로드",
+      "summary": "Suno 노래 가사를 SRT·LRC로",
+      "description": "Suno 노래의 가사와 싱크 정보를 파일로 받아요.\n\n• SRT · 음절 SRT · LRC · VTT · TXT\n• Suno 노래 화면 오른쪽 아래 [♫ Suno 가사 다운로드] 또는 확장 아이콘\n• 파일은 크롬 기본 다운로드 폴더에 저장돼요\n\n예전 MoaWing Suno 다운로더(v2~v5)가 켜져 있으면 크롬에서 꺼 주세요.",
+      "section": "확장 프로그램",
+      "kind": "extension",
+      "url": "https://github.com/cnswk/imageall-download#readme",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/suno_lyrics_icon.png",
+        "sig": "7317816ed71035e028cabbf626cab9f88629e33de6bbce1beddffd2f8eb35fc513e44009fad79a70381dded8a50cee194c4e50dfb172fc2981fa197c2492ba07"
+      },
+      "version": "6.3.0",
+      "package": {
+        "url": "https://github.com/cnswk/imageall-download/releases/download/suno-lyrics-6.3.0/suno-lyrics-6.3.0.zip",
+        "roots": [
+          "icons",
+          "tests",
+          "background.js",
+          "content.js",
+          "core.js",
+          "LICENSE",
+          "manifest.json",
+          "popup.html",
+          "popup.js",
+          "README_설치안내.txt",
+          "THIRD_PARTY_NOTICES.txt"
+        ],
+        "size": 32161,
+        "sig": "6036e61350647751a52fde1ae6557500438bf55c70a9235fe03709241a08609a996d045770e1afe50af7a5e7adc124e6c83eaa4625df8949350c94f6c5e46405"
+      },
+      "default_dir": "C:\\MoaWingExtensions\\suno-lyrics"
     }
   ],
   "launcher": {
-    "version": "0.4.0",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.4.0/MoaWingLauncher.exe",
-    "size": 8890880,
-    "sig": "5e717744757fd664e4c91f476279b241c4924527bcf8e6b42e624ca1ae51abcbcace20cd61cc577405d6ee7839c09005a08c7409bf86283da2cea7aa858af408"
+    "version": "0.5.0",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.5.0/MoaWingLauncher.exe",
+    "size": 8933376,
+    "sig": "c46affecefa51fc773239293f9b73fe461ac85d96d052c3b7dc5d34baeaa334354c1961a0e937a0f9d7b6913059cbcbb212bf1bb6023bd3e35bd82604f970a08"
   }
 }
