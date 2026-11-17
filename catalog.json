@@ -50,7 +50,8 @@
           "title": "ImageAll 2 0.1.0",
           "body": "녹화 목록 폴더, 다음 그림 나올 때까지 누르기, 그림을 보고 게임·게임기 다시 켜기가 들어갔어요."
         }
-      ]
+      ],
+      "section": "프로그램"
     },
     {
       "id": "moawing-editor",
@@ -96,7 +97,8 @@
       "banner": {
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_banner.png",
         "sig": "c49ab85f50776d93c785ac5d5af7cc508621d81fdd70e6819e8b13667eba3602b77d5bbd4018d9cdb5f3f57e75e46f1b1804a55fce99823eaf521b2f420e2e0b"
-      }
+      },
+      "section": "프로그램"
     },
     {
       "id": "youtube-downloader",
@@ -125,7 +127,8 @@
       "banner": {
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/youtube_downloader_banner.png",
         "sig": "71cefac2b6f8626d3f16ade146f7a403a0004287915ef095a3f6e099ee41db5042b724b552827306e8f94de17b21d669e9e0b9416b2dd38c944ac9752a028e05"
-      }
+      },
+      "section": "프로그램"
     }
   ],
   "items": [
@@ -147,30 +150,17 @@
       }
     },
     {
-      "id": "telegram",
-      "name": "텔레그램",
-      "summary": "메신저",
-      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.",
-      "section": "다른 프로그램",
-      "kind": "external",
-      "url": "https://desktop.telegram.org/",
-      "exe_paths": [
-        "%APPDATA%\\Telegram Desktop\\Telegram.exe",
-        "%LOCALAPPDATA%\\Programs\\Telegram Desktop\\Telegram.exe"
-      ]
-    },
-    {
-      "id": "kakaotalk",
-      "name": "카카오톡",
-      "summary": "메신저",
-      "description": "카카오톡 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 카카오톡이 알아서 해요.",
-      "section": "다른 프로그램",
-      "kind": "external",
-      "url": "https://www.kakaocorp.com/page/service/service/KakaoTalk",
-      "exe_paths": [
-        "%ProgramFiles(x86)%\\Kakao\\KakaoTalk\\KakaoTalk.exe",
-        "%ProgramFiles%\\Kakao\\KakaoTalk\\KakaoTalk.exe"
-      ]
+      "id": "max-radar-web",
+      "name": "MAX RADAR",
+      "summary": "시장·차트 분석·연습거래",
+      "description": "시장 시세, 차트 분석, 연습거래(모의 거래), AI 분석을 한 곳에서 보는 웹페이지예요.\n\n[열기]를 누르면 브라우저로 열려요(설치 없음).",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://max-radar.pages.dev",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/max_radar_icon.png",
+        "sig": "b6e79e78a528d837378a8a8990df2821c3c3af467f41001abf39735c8658b3fa87e849ab32c316d826b45c1bd1f35f4fd63877a43eb3751c5997917d5ca9a204"
+      }
     },
     {
       "id": "moawing-ai",
@@ -241,19 +231,6 @@
       "default_dir": "C:\\MoaWingExtensions\\suno-lyrics"
     },
     {
-      "id": "max-radar-web",
-      "name": "MAX RADAR",
-      "summary": "시장·차트 분석·연습거래",
-      "description": "시장 시세, 차트 분석, 연습거래(모의 거래), AI 분석을 한 곳에서 보는 웹페이지예요.\n\n[열기]를 누르면 브라우저로 열려요(설치 없음).",
-      "section": "웹페이지",
-      "kind": "web",
-      "url": "https://max-radar.pages.dev",
-      "icon": {
-        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/max_radar_icon.png",
-        "sig": "b6e79e78a528d837378a8a8990df2821c3c3af467f41001abf39735c8658b3fa87e849ab32c316d826b45c1bd1f35f4fd63877a43eb3751c5997917d5ca9a204"
-      }
-    },
-    {
       "id": "max-radar-ai",
       "name": "MAX RADAR AI 결과 가져오기",
       "summary": "차트 캡처를 여러 AI에 보내 분석",
@@ -305,6 +282,32 @@
         "sig": "ebabb7ba642f704664f62c0b6d52cecb694606b78678a8d3e8ed782ca739d9569c66427c9f3f7cfd29e5fba3c4c0860b4a7476b0247d2387321f52bcb61b000f"
       },
       "default_dir": "C:\\MoaWingExtensions\\max-radar-ai"
+    },
+    {
+      "id": "telegram",
+      "name": "텔레그램",
+      "summary": "메신저",
+      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://desktop.telegram.org/",
+      "exe_paths": [
+        "%APPDATA%\\Telegram Desktop\\Telegram.exe",
+        "%LOCALAPPDATA%\\Programs\\Telegram Desktop\\Telegram.exe"
+      ]
+    },
+    {
+      "id": "kakaotalk",
+      "name": "카카오톡",
+      "summary": "메신저",
+      "description": "카카오톡 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 카카오톡이 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://www.kakaocorp.com/page/service/service/KakaoTalk",
+      "exe_paths": [
+        "%ProgramFiles(x86)%\\Kakao\\KakaoTalk\\KakaoTalk.exe",
+        "%ProgramFiles%\\Kakao\\KakaoTalk\\KakaoTalk.exe"
+      ]
     }
   ],
   "launcher": {
