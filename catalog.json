@@ -41,7 +41,7 @@
       "notices": [
         {
           "date": "2026-11-17",
-          "title": "ImageAll 런처가 나왔어요",
+          "title": "MoaWing 런처가 나왔어요",
           "body": "런처에서 설치·업데이트·실행을 한 곳에서 해요. 새 판이 나오면 알아서 받아 둬요.",
           "url": "https://github.com/cnswk/imageall-download/releases"
         },
@@ -54,9 +54,9 @@
     }
   ],
   "launcher": {
-    "version": "0.2.1",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.2.1/ImageAllLauncher.exe",
-    "size": 8821760,
-    "sig": "2baf086323df9b98c464867bd36541b9a8c04945750c95e4c63237507bc00b2968cb8f7a15d300a63f8355461685b27e5cf27d7f90f223477abd1ee2d2685e0a"
+    "version": "0.3.0",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.3.0/MoaWingLauncher.exe",
+    "size": 8820736,
+    "sig": "a6f1c99075bfa5315625a40948c7995cd54390f7bf8d22b899ee299c6004755a7f25b47bd10ddca996b8f9bb4808d1c572591f603e75ad47088be6f9feb4930b"
   }
 }
