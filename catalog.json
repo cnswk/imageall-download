@@ -97,12 +97,86 @@
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_banner.png",
         "sig": "c49ab85f50776d93c785ac5d5af7cc508621d81fdd70e6819e8b13667eba3602b77d5bbd4018d9cdb5f3f57e75e46f1b1804a55fce99823eaf521b2f420e2e0b"
       }
+    },
+    {
+      "id": "youtube-downloader",
+      "name": "유튜브 다운로더",
+      "summary": "주소만 넣으면 바로 받아요",
+      "description": "유튜브 주소를 넣으면 바로 받아 주는 프로그램이에요.\n\n• 주소를 복사만 해 두면 알아서 입력칸에 채워요\n• 최고 화질 자동, 또는 360p~4K 직접 선택\n• 음악만 MP3로(앨범 이미지 포함)\n• 자막 같이 받기(한국어·영어)\n• 재생목록 전체 받기\n• 진행률·속도·남은 시간, 중간 취소\n\n받은 영상은 내 컴퓨터의 다운로드·동영상 폴더(또는 직접 고른 폴더)에 저장돼요. 갑자기 안 받아지면 프로그램 오른쪽 아래 [엔진 갱신]을 눌러 주세요.",
+      "version": "1.0.0",
+      "notes": "",
+      "exe": "유튜브 다운로더.exe",
+      "default_dir": "C:\\YoutubeDownloader",
+      "package": {
+        "url": "https://github.com/cnswk/imageall-download/releases/download/youtube-downloader-1.0.0/youtube-downloader-1.0.0.zip",
+        "roots": [
+          "_internal",
+          "사용법.txt",
+          "유튜브 다운로더.exe"
+        ],
+        "size": 66883144,
+        "sig": "405490af8254b546fdf7bbc99f296b834cb0381cfacefde0e6bc0d9729b94fbe9267e1765d29fdea319264da5994b2eec24e0c490632d4365c7650bdad666b01"
+      },
+      "links": [],
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/youtube_downloader_icon.png",
+        "sig": "8553e25525368519b32c2cbe1dd29fd70bb0487f76647f63862c187b5921718631eb3299b396adba0f550db2b7c34aa193f07bc2739dab37d6fe7d260d1abe04"
+      },
+      "banner": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/youtube_downloader_banner.png",
+        "sig": "71cefac2b6f8626d3f16ade146f7a403a0004287915ef095a3f6e099ee41db5042b724b552827306e8f94de17b21d669e9e0b9416b2dd38c944ac9752a028e05"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "moawing-editor-web",
+      "name": "MoaWing 편집기 (웹)",
+      "summary": "설치 없이 브라우저에서 바로",
+      "description": "MoaWing 편집기를 설치하지 않고 인터넷 창에서 바로 써요.\n\n[열기]를 누르면 브라우저로 열려요.",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://moawing-editor.pages.dev",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_icon.png",
+        "sig": "46b19b29ee51a7f401e352d5af6a4633c206edc137aca4eda854d756113f9531bfeea066799829e6a83acc0cbf0577a074c939d313f5a04a6dd90d369c8e500e"
+      },
+      "banner": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_banner.png",
+        "sig": "c49ab85f50776d93c785ac5d5af7cc508621d81fdd70e6819e8b13667eba3602b77d5bbd4018d9cdb5f3f57e75e46f1b1804a55fce99823eaf521b2f420e2e0b"
+      }
+    },
+    {
+      "id": "telegram",
+      "name": "텔레그램",
+      "summary": "메신저",
+      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://desktop.telegram.org/",
+      "exe_paths": [
+        "%APPDATA%\\Telegram Desktop\\Telegram.exe",
+        "%LOCALAPPDATA%\\Programs\\Telegram Desktop\\Telegram.exe"
+      ]
+    },
+    {
+      "id": "kakaotalk",
+      "name": "카카오톡",
+      "summary": "메신저",
+      "description": "카카오톡 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 카카오톡이 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://www.kakaocorp.com/page/service/service/KakaoTalk",
+      "exe_paths": [
+        "%ProgramFiles(x86)%\\Kakao\\KakaoTalk\\KakaoTalk.exe",
+        "%ProgramFiles%\\Kakao\\KakaoTalk\\KakaoTalk.exe"
+      ]
     }
   ],
   "launcher": {
-    "version": "0.3.1",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.3.1/MoaWingLauncher.exe",
-    "size": 8820736,
-    "sig": "1924878eecc3a372ae7cab5137477c4adf72c31b0114a29d66195f1bc6e40999d0d1cd8a564d74a1b9de88bca0a4b1f24d9a7b23027b154f57886644c8f6d006"
+    "version": "0.4.0",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.4.0/MoaWingLauncher.exe",
+    "size": 8890880,
+    "sig": "5e717744757fd664e4c91f476279b241c4924527bcf8e6b42e624ca1ae51abcbcace20cd61cc577405d6ee7839c09005a08c7409bf86283da2cea7aa858af408"
   }
 }
