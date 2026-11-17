@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.4",
-      "notes": "녹화 목록을 끌어다 놓아서 폴더 안팎·위아래로 옮길 수 있어요.",
+      "version": "0.3.5",
+      "notes": "오른쪽 아래 알림 영역(트레이) 아이콘과 [숨기기]가 생겼어요.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.4/imageall2-0.3.4.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.5/imageall2-0.3.5.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 45933556,
-        "sig": "abaa6182df39bcdbbea5b3b03246898f5663259257d7b0babd6f3265bf14dbfac43db5148f216adfcb978a99235779ab08b60db02434b5170c421bdcb860270e"
+        "size": 45992608,
+        "sig": "a199d14b293f44a348550cb61dd7ab0587dd7882322fc9527f1a4f675fe929b3ddd82b30b945618ccc88cf7ef44bb21c2c9e6af69935f12124f3720ec2da5f0b"
       },
       "links": [
         {
@@ -39,6 +39,16 @@
         "sig": "d98ca0c00d6b320600586642664281831f7aa77c23c72ad70c173ddb81d4fd1d0bc5ebc376221d736a8f77f36ad50b64a7d6e185abc954b03dbc8125e1c5a000"
       },
       "notices": [
+        {
+          "date": "2026-11-17",
+          "title": "ImageAll 2 0.3.5 — 트레이 아이콘",
+          "body": "• 위쪽 [숨기기]: 창을 숨기고 오른쪽 아래 알림 영역에 둬요(실행은 계속).\n• 트레이 아이콘: 누르면 창 열기, 오른쪽 클릭 = 열기 · 모두 멈춤 · 끄기, 마우스를 올리면 '실행 중 N대'.\n• 프로그램 아이콘이 생겼어요."
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MoaWing 런처 0.8.0 — 트레이에 두기",
+          "body": "런처 위쪽 '윈도우 켤 때: 트레이에 두기'(새 기본값)\n• 컴퓨터를 켜면 오른쪽 아래에 아이콘으로 있어요(창 없음).\n• 오른쪽 클릭 = 설치한 프로그램 바로 켜기 · 지금 업데이트 확인 · 트레이에서 빼기.\n• 3시간마다 알아서 업데이트하고 바꾸면 알림으로 알려 줘요."
+        },
         {
           "date": "2026-11-17",
           "title": "ImageAll 2 0.3.4",
@@ -653,9 +663,9 @@
     }
   ],
   "launcher": {
-    "version": "0.7.0",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.7.0/MoaWingLauncher.exe",
-    "size": 9141248,
-    "sig": "781bad990cdb70ea63e05867d55bf499e94d9aa2bcdd8a7426f0074a3ca7e57258d7df6c6881212ed05451792243da352ea47f69e7caa0d6f991e42a9a53110e"
+    "version": "0.8.0",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.8.0/MoaWingLauncher.exe",
+    "size": 9207296,
+    "sig": "1d1cd6388ff5d9603ff40ec9dc858ec90589b3278320e5ae1b67c3ba213cadf44e62c741b9d0dbe2f3eadccbf84e23f96d534904836286ac6ff1b80fa0be2500"
   }
 }
