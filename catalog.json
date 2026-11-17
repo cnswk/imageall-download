@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.1",
-      "notes": "더 새 버전에서 만든 작업 파일을 열 때 깨진 파일로 여기지 않고 그대로 둬요.",
+      "version": "0.3.2",
+      "notes": "새 판이 나오면 ImageAll 2 위쪽에 한 줄로 알려 줘요.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.1/imageall2-0.3.1.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.2/imageall2-0.3.2.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 45923972,
-        "sig": "c8510b14d7f9e53b94a3dcd2c0e5f4a0ddb0ad61d3da21df7d44a3ab5499aabcf5fcf59ae7e62ae1d8fb143960f07da0e9ad9d4eabfdc9c0193c07e3e329120f"
+        "size": 45933191,
+        "sig": "3dd893e55fdef036a69311e26c9c2395cb4f3a06629f4e4cb6de56f12ca1895878b9c56e887d7f7948376b8999ce92ecf215969dae40f731f286ce545e64ab04"
       },
       "links": [
         {
@@ -39,6 +39,16 @@
         "sig": "d98ca0c00d6b320600586642664281831f7aa77c23c72ad70c173ddb81d4fd1d0bc5ebc376221d736a8f77f36ad50b64a7d6e185abc954b03dbc8125e1c5a000"
       },
       "notices": [
+        {
+          "date": "2026-11-17",
+          "title": "ImageAll 2 0.3.2",
+          "body": "• 새 판이 나오면 위쪽 줄에 '새 판 … 있어요'가 떠요(런처가 받아 둔 목록을 봐요)."
+        },
+        {
+          "date": "2026-11-17",
+          "title": "MoaWing 런처 0.7.0 — 컴퓨터 켤 때 조용히 업데이트",
+          "body": "런처 위쪽 '윈도우 켤 때'에서 고를 수 있어요.\n• 조용히 업데이트(기본): 컴퓨터를 켜면 창 없이 새 판을 받아 두고 꺼져요.\n• 런처 창 열기: 컴퓨터를 켜면 런처 창이 떠요.\n• 안 켬: 런처를 직접 켤 때만 업데이트해요."
+        },
         {
           "date": "2026-11-17",
           "title": "ImageAll 2 0.3.1",
@@ -633,9 +643,9 @@
     }
   ],
   "launcher": {
-    "version": "0.6.1",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.6.1/MoaWingLauncher.exe",
-    "size": 9001472,
-    "sig": "e753278daef41890f04d25fd6c9de6d815ab8e6b0afe255625aadadbb6bae8e8a47758cc890b8197c300999093a378a7aadc3d8fbeb35dcaf5872feaa2814501"
+    "version": "0.7.0",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.7.0/MoaWingLauncher.exe",
+    "size": 9141248,
+    "sig": "781bad990cdb70ea63e05867d55bf499e94d9aa2bcdd8a7426f0074a3ca7e57258d7df6c6881212ed05451792243da352ea47f69e7caa0d6f991e42a9a53110e"
   }
 }
