@@ -51,12 +51,58 @@
           "body": "녹화 목록 폴더, 다음 그림 나올 때까지 누르기, 그림을 보고 게임·게임기 다시 켜기가 들어갔어요."
         }
       ]
+    },
+    {
+      "id": "moawing-editor",
+      "name": "MoaWing 편집기",
+      "summary": "한국어 영상 편집기",
+      "description": "FilmCraft(MIT/Apache-2.0)를 바탕으로 만든 한국어 영상 편집기예요.\n\n• 내보낸 영상은 설치 폴더의 'PC편집기파일' 폴더에 저장돼요(업데이트해도 그대로).\n• 설정과 자동 저장은 %APPDATA%\\MoaWing Editor에 있어요.\n• 편집기 안에서도 스스로 업데이트해요.\n\n처음 켤 때 \"Windows의 PC 보호\" 창이 뜨면 [추가 정보] → [실행]을 눌러 주세요.",
+      "version": "0.59.0",
+      "notes": "",
+      "exe": "MoaWingEditor.exe",
+      "default_dir": "C:\\MoaWingEditor",
+      "package": {
+        "url": "https://github.com/cnswk/imageall-download/releases/download/moawing-editor-0.59.0/moawing-editor-0.59.0.zip",
+        "roots": [
+          "ATTRIBUTION.md",
+          "LICENSE-APACHE",
+          "LICENSE-MIT",
+          "MoaWingEditor.exe",
+          "NOTICE",
+          "OFL-blackhansans.txt",
+          "OFL-dohyeon.txt",
+          "OFL-jua.txt",
+          "OFL-nanumpenscript.txt",
+          "OFL-pretendard.txt",
+          "README.txt"
+        ],
+        "size": 42245234,
+        "sig": "62c5dc60fdcc8c04928c2d5ddb7041b8732720c2dd7b3d8f6bb488b66d13a580441ae30dcf8ed5acf6b7ee3ce5ec6c14ad72cb317c2fb7c68f2f375e6a2ee908"
+      },
+      "links": [
+        {
+          "label": "웹에서 바로 쓰기",
+          "url": "https://moawing-editor.pages.dev"
+        },
+        {
+          "label": "편집기 내려받기 페이지",
+          "url": "https://github.com/cnswk/moawing-editor-download/releases/latest"
+        }
+      ],
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_icon.png",
+        "sig": "46b19b29ee51a7f401e352d5af6a4633c206edc137aca4eda854d756113f9531bfeea066799829e6a83acc0cbf0577a074c939d313f5a04a6dd90d369c8e500e"
+      },
+      "banner": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_banner.png",
+        "sig": "c49ab85f50776d93c785ac5d5af7cc508621d81fdd70e6819e8b13667eba3602b77d5bbd4018d9cdb5f3f57e75e46f1b1804a55fce99823eaf521b2f420e2e0b"
+      }
     }
   ],
   "launcher": {
-    "version": "0.3.0",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.3.0/MoaWingLauncher.exe",
+    "version": "0.3.1",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.3.1/MoaWingLauncher.exe",
     "size": 8820736,
-    "sig": "a6f1c99075bfa5315625a40948c7995cd54390f7bf8d22b899ee299c6004755a7f25b47bd10ddca996b8f9bb4808d1c572591f603e75ad47088be6f9feb4930b"
+    "sig": "1924878eecc3a372ae7cab5137477c4adf72c31b0114a29d66195f1bc6e40999d0d1cd8a564d74a1b9de88bca0a4b1f24d9a7b23027b154f57886644c8f6d006"
   }
 }
