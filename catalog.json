@@ -239,6 +239,72 @@
         "sig": "6036e61350647751a52fde1ae6557500438bf55c70a9235fe03709241a08609a996d045770e1afe50af7a5e7adc124e6c83eaa4625df8949350c94f6c5e46405"
       },
       "default_dir": "C:\\MoaWingExtensions\\suno-lyrics"
+    },
+    {
+      "id": "max-radar-web",
+      "name": "MAX RADAR",
+      "summary": "시장·차트 분석·연습거래",
+      "description": "시장 시세, 차트 분석, 연습거래(모의 거래), AI 분석을 한 곳에서 보는 웹페이지예요.\n\n[열기]를 누르면 브라우저로 열려요(설치 없음).",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://max-radar.pages.dev",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/max_radar_icon.png",
+        "sig": "b6e79e78a528d837378a8a8990df2821c3c3af467f41001abf39735c8658b3fa87e849ab32c316d826b45c1bd1f35f4fd63877a43eb3751c5997917d5ca9a204"
+      }
+    },
+    {
+      "id": "max-radar-ai",
+      "name": "MAX RADAR AI 결과 가져오기",
+      "summary": "차트 캡처를 여러 AI에 보내 분석",
+      "description": "화면 캡처와 지침서를 Gemini·ChatGPT·Claude·Grok 본인 계정에 자동으로 보내 진입가·손절가·목표가 분석을 받고, MAX RADAR 차트분석 결과도 가져와요.\n\n• 여러 AI에 동시에 물어보고 합의 카드로 정리\n• 주문은 하지 않아요(분석만)\n• 각 AI 사이트에는 미리 로그인해 두세요\n\n웹 스토어에 올리기 전 판이라, 설치한 뒤 크롬에 한 번 넣어 줘야 해요(아래 '크롬에 넣는 법').",
+      "section": "확장 프로그램",
+      "kind": "extension",
+      "url": "https://max-radar.pages.dev/help/ai-analysis/",
+      "icon": {
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/max_radar_icon.png",
+        "sig": "b6e79e78a528d837378a8a8990df2821c3c3af467f41001abf39735c8658b3fa87e849ab32c316d826b45c1bd1f35f4fd63877a43eb3751c5997917d5ca9a204"
+      },
+      "links": [
+        {
+          "label": "사용법",
+          "url": "https://max-radar.pages.dev/help/ai-analysis/"
+        },
+        {
+          "label": "MAX RADAR 열기",
+          "url": "https://max-radar.pages.dev"
+        }
+      ],
+      "version": "0.7.5",
+      "package": {
+        "url": "https://github.com/cnswk/imageall-download/releases/download/max-radar-ai-0.7.5/max-radar-ai-0.7.5.zip",
+        "roots": [
+          "icons",
+          "background.js",
+          "bridge-core.mjs",
+          "dev-reload.mjs",
+          "guideline.mjs",
+          "manifest.json",
+          "options.css",
+          "options.html",
+          "options.js",
+          "panel-batch.mjs",
+          "panel-guideline.mjs",
+          "panel-site.mjs",
+          "popup.css",
+          "popup.html",
+          "popup.js",
+          "provider-automation.js",
+          "README.md",
+          "sidepanel.css",
+          "sidepanel.html",
+          "sidepanel.js",
+          "site-content.js"
+        ],
+        "size": 114150,
+        "sig": "ebabb7ba642f704664f62c0b6d52cecb694606b78678a8d3e8ed782ca739d9569c66427c9f3f7cfd29e5fba3c4c0860b4a7476b0247d2387321f52bcb61b000f"
+      },
+      "default_dir": "C:\\MoaWingExtensions\\max-radar-ai"
     }
   ],
   "launcher": {
