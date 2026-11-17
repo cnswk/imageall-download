@@ -485,20 +485,16 @@
   ],
   "items": [
     {
-      "id": "moawing-editor-web",
-      "name": "MoaWing 편집기 (웹)",
+      "id": "moawing-studio-web",
+      "name": "MoaWing 스튜디오 (웹)",
       "summary": "설치 없이 브라우저에서 바로",
-      "description": "MoaWing 편집기를 설치하지 않고 인터넷 창에서 바로 써요.\n\n[열기]를 누르면 브라우저로 열려요.",
+      "description": "MoaWing AI 확장 프로그램의 스튜디오를 설치 없이 인터넷 창에서 바로 써요.\n\n[열기]를 누르면 브라우저로 열려요.",
       "section": "웹페이지",
       "kind": "web",
-      "url": "https://moawing-editor.pages.dev",
+      "url": "https://moawing-studio.pages.dev/",
       "icon": {
-        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_icon.png",
-        "sig": "46b19b29ee51a7f401e352d5af6a4633c206edc137aca4eda854d756113f9531bfeea066799829e6a83acc0cbf0577a074c939d313f5a04a6dd90d369c8e500e"
-      },
-      "banner": {
-        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_editor_banner.png",
-        "sig": "c49ab85f50776d93c785ac5d5af7cc508621d81fdd70e6819e8b13667eba3602b77d5bbd4018d9cdb5f3f57e75e46f1b1804a55fce99823eaf521b2f420e2e0b"
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/moawing_ai_icon.png",
+        "sig": "faa2b8cd86b425d79621603d55fab6afd05f6f1341ec56792bcf98bff280da455be381a6ca1f9686abd254f05758b3e4f0f86c478e253378516184180229e505"
       }
     },
     {
