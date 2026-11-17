@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoaWing 런처 — 내 프로그램을 한 곳에서</title>
+<meta name="description" content="MoaWing 런처 하나로 ImageAll 2, MoaWing 편집기, 유튜브 다운로더 등을 설치·업데이트·실행하세요.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234084ff'/%3E%3Ctext x='16' y='21' font-size='13' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'%3EMW%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #15171c; --panel: #1c1f25; --card: #24282f; --line: #373d47;
+    --text: #e4e7ed; --sub: #949ba7; --accent: #4084ff; --good: #3ec27a; --warn: #f2a838;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; line-height: 1.6; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
+  .logo { width: 34px; height: 34px; border-radius: 9px; background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-weight: 800; font-size: 14px; }
+  header b { font-size: 19px; }
+  .hero { position: relative; overflow: hidden; border-radius: 18px; margin: 8px 0 28px;
+    background: linear-gradient(120deg, #0e1220 0%, #16306a 55%, #40308c 100%); padding: 56px 40px; }
+  .hero::after { content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 40px 40px; pointer-events: none; }
+  .hero > * { position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 8px; line-height: 1.2; }
+  .hero p { color: #cfd6e4; font-size: 17px; margin: 0 0 28px; max-width: 560px; }
+  .dl { display: inline-flex; align-items: center; gap: 12px; background: var(--accent); color: #fff; text-decoration: none;
+    font-size: 19px; font-weight: 700; padding: 16px 28px; border-radius: 12px; box-shadow: 0 8px 24px rgba(64,132,255,.35); }
+  .dl:hover { background: #5c98ff; }
+  .dl svg { width: 22px; height: 22px; }
+  .meta { color: var(--sub); font-size: 14px; margin-top: 12px; }
+  h2 { font-size: 22px; margin: 36px 0 14px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; color: var(--sub); font-size: 14px; }
+  .num { width: 30px; height: 30px; border-radius: 50%; background: rgba(64,132,255,.18); color: var(--accent);
+    display: grid; place-items: center; font-weight: 800; margin-bottom: 10px; }
+  .sec { color: var(--sub); font-size: 14px; margin: 22px 0 8px; }
+  .apps { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .app { display: flex; gap: 14px; align-items: center; background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 12px 14px; }
+  .app img, .app .tile { width: 44px; height: 44px; border-radius: 10px; flex: none; }
+  .app .tile { background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 14px; }
+  .app b { display: block; font-size: 15px; }
+  .app span { color: var(--sub); font-size: 13px; }
+  .note { background: rgba(242,168,56,.10); border: 1px solid rgba(242,168,56,.45); border-radius: 12px; padding: 14px 16px; color: #f5d6a3; font-size: 14px; }
+  footer { color: var(--sub); font-size: 13px; padding: 40px 0 30px; border-top: 1px solid var(--line); margin-top: 44px; }
+  @media (max-width: 520px) { .hero { padding: 36px 20px; } .dl { width: 100%; justify-content: center; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo">MW</div><b>MoaWing</b></header>
+
+  <section class="hero">
+    <h1>MoaWing 런처</h1>
+    <p>내 프로그램을 한 곳에서. 목록에서 고르고 [설치] → [플레이]. 새 판이 나오면 알아서 업데이트해요.</p>
+    <a class="dl" id="download" href="https://github.com/cnswk/imageall-download/releases">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M6 10l6 6 6-6"/><path d="M4 21h16"/></svg>
+      Windows용 내려받기
+    </a>
+    <div class="meta" id="meta">Windows 10 · 11 (64비트) · 설치 없이 바로 실행</div>
+  </section>
+
+  <h2>쓰는 법</h2>
+  <div class="grid">
+    <div class="card"><div class="num">1</div><h3>받기</h3><p>위의 [Windows용 내려받기]를 눌러 MoaWingLauncher.exe를 받아요.</p></div>
+    <div class="card"><div class="num">2</div><h3>실행</h3><p>받은 파일을 더블클릭해요. 파란 "Windows의 PC 보호" 창이 뜨면 [추가 정보] → [실행].</p></div>
+    <div class="card"><div class="num">3</div><h3>설치·플레이</h3><p>왼쪽 목록에서 프로그램을 고르고 [설치], 다 되면 [플레이].</p></div>
+  </div>
+
+  <h2>이런 점이 좋아요</h2>
+  <div class="grid">
+    <div class="card"><h3>알아서 업데이트</h3><p>새 판이 나오면 런처가 받아서 바꿔 둬요. 런처 자신도 스스로 새것이 돼요.</p></div>
+    <div class="card"><h3>가짜 파일은 설치 안 함</h3><p>모든 파일에 만든 사람의 서명이 있어요. 서명이 안 맞으면 런처가 설치하지 않아요.</p></div>
+    <div class="card"><h3>내 파일은 그대로</h3><p>업데이트해도 작업·설정·내보낸 영상 같은 내 파일은 건드리지 않아요.</p></div>
+  </div>
+
+  <h2>들어 있는 것</h2>
+  <div id="list"><p class="sec">목록을 불러오는 중…</p></div>
+
+  <h2>처음 실행할 때</h2>
+  <div class="note">
+    아직 마이크로소프트 코드 서명 인증서가 없는 프로그램이라, 처음 켤 때 윈도우가 "Windows의 PC 보호" 창을 띄울 수 있어요.
+    [추가 정보]를 누른 뒤 [실행]을 누르면 돼요. 런처 안에서 받는 프로그램은 런처가 서명을 확인해요.
+  </div>
+
+  <footer>MoaWing · 파일은 <a href="https://github.com/cnswk/imageall-download/releases">GitHub 내려받기 페이지</a>에서도 받을 수 있어요.</footer>
+</div>
+
+<script>
+// 런처와 같은 목록표(catalog.json)를 읽어 내려받기 버튼과 목록을 채운다. innerHTML은 쓰지 않는다(글은 textContent로만).
+(function () {
+  var ORDER = ["프로그램", "웹페이지", "확장 프로그램", "다른 프로그램"];
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  function https(u) { return typeof u === "string" && u.indexOf("https://") === 0; }
+  function mb(n) { return (n / 1048576).toFixed(1) + "MB"; }
+  fetch("catalog.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (c) {
+    var l = c.launcher;
+    if (l && https(l.url)) {
+      document.getElementById("download").href = l.url;
+      document.getElementById("meta").textContent = "판 " + l.version + " · " + mb(l.size) + " · Windows 10 · 11 (64비트) · 설치 없이 바로 실행";
+    }
+    var entries = (c.apps || []).map(function (a) { return { name: a.name, summary: a.summary, section: a.section || "프로그램", icon: a.icon }; })
+      .concat((c.items || []).map(function (i) { return { name: i.name, summary: i.summary, section: i.section || "프로그램", icon: i.icon }; }));
+    var sections = ORDER.slice();
+    entries.forEach(function (e) { if (sections.indexOf(e.section) < 0) sections.push(e.section); });
+    var list = document.getElementById("list");
+    list.textContent = "";
+    sections.forEach(function (s) {
+      var group = entries.filter(function (e) { return e.section === s; });
+      if (!group.length) return;
+      list.appendChild(el("p", "sec", s));
+      var box = el("div", "apps");
+      group.forEach(function (e) {
+        var row = el("div", "app");
+        if (e.icon && https(e.icon.url)) { var img = el("img"); img.src = e.icon.url; img.alt = ""; img.width = 44; img.height = 44; row.appendChild(img); }
+        else row.appendChild(el("div", "tile", (e.name || "?").slice(0, 2)));
+        var t = el("div"); t.appendChild(el("b", null, e.name)); t.appendChild(el("span", null, e.summary || "")); row.appendChild(t);
+        box.appendChild(row);
+      });
+      list.appendChild(box);
+    });
+  }).catch(function () {
+    document.getElementById("list").textContent = "목록을 불러오지 못했어요. 아래 GitHub 내려받기 페이지를 이용해 주세요.";
+  });
+})();
+</script>
+</body>
+</html>
