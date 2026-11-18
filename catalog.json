@@ -40,6 +40,11 @@
       },
       "notices": [
         {
+          "date": "2026-11-19",
+          "title": "MoaWing 런처 0.9.1 — 새 아이콘",
+          "body": "• 런처와 ImageAll 2의 아이콘이 새 그림으로 바뀌었어요.\n• 창 제목 줄이 윈도우 테마와 상관없이 늘 어둡게 나와요.\n• 바탕화면 바로가기는 윈도우가 옛 그림을 잠깐 기억할 수 있어요(다시 로그인하면 바뀌어요)."
+        },
+        {
           "date": "2026-11-18",
           "title": "ImageAll 2 0.3.8 — 차례대로 연결 · [다시 연결] · MuMu 최적 설정",
           "body": "• 게임기 여러 대를 한꺼번에 연결하지 않고 차례대로 연결해요(한 번에 2대, 한 대에 45초까지). 기다리는 게임기는 목록에 '차례 기다리는 중(n번째)'로 보여요.\n• 처음 연결이 안 돼도 3번까지 스스로 다시 해 보고, 연결되기 전에 누른 [실행]은 연결되는 대로 해요.\n• 게임기 목록: 줄마다 [다시 연결], 체크한 게임기 [다시 연결], [켜진 것만] 보기. '연결 중'에 마우스를 올리면 안 된 이유가 보여요.\n• MuMu 게임기도 멀티 최적 설정(화면·코어·메모리·프레임)을 맞춰요. 다시 켜야 먹어서 맞추기 전에 한 번 물어봐요.\n• 목록 위에 '화면 Nms'(화면 그리는 시간)가 보이고, 느려지면 기록 칸에 남아요."
@@ -674,9 +679,9 @@
     }
   ],
   "launcher": {
-    "version": "0.9.0",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.0/MoaWingLauncher.exe",
-    "size": 9253888,
-    "sig": "3ff9a6fb8832c61be7dbc82e52ad52ed44c0b96a2efd9bc65117c67deb43ac1a387720ad6ade794c2e965ac1bbbce1f9b6a9bcf5f3b5515d7df4135bca47d004"
+    "version": "0.9.1",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.1/MoaWingLauncher.exe",
+    "size": 9234432,
+    "sig": "7f70c23bd6add8335b36fd9b96a01345897c8ee0386a262ee007f37d719183c99196c4e07b5f0339556db9362899d2056635930b0b367001e764d0befc6ce80e"
   }
 }
