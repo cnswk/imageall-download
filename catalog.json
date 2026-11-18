@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.18",
-      "notes": "쿠폰 넣기가 쉬워졌어요 — 쿠폰 하나를 넣는 과정(번호 칸 누르기 → 아무 번호나 치기 → 확인 → 뜬 창 닫기)을 '쿠폰 입력' 폴더에 한 번만 녹화하면, 친 번호 자리에 목록의 번호를 하나씩 바꿔 넣어요('하는 일'을 따로 바꾸지 않아도 돼요). 지난 판: 다른 프로그램에서 복사한 글 Ctrl+V로 붙여 넣기.",
+      "version": "0.3.19",
+      "notes": "창이 화면 가득이 아니라 알맞은 크기(1180×720)로 켜지고, 고쳐 놓은 크기를 기억해요. 창을 좁히면 작업·녹화 목록·실행만 보이는 한 칸 모양이 돼요. 단추 자리도 바뀌었어요 — [사람처럼]·[멈추면 다시 켜기]는 작업 구역으로, [이미지 추가]·[새로 녹화]·[뒤로 버튼]은 [실행] 아래로, [새 폴더]는 '녹화 목록' 제목 옆으로. 단추 크기도 맞췄어요. 지난 판: 쿠폰 녹화에서 친 번호 자리에 목록 번호 넣기.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.18/imageall2-0.3.18.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.19/imageall2-0.3.19.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 46150944,
-        "sig": "5d3e6ca14163ef8d92a10b2f7337eb9ea857a878d4b49e9209ddbaa24d0135fab15644809309b7d0f80e8a9cfc1e04e25c7c775d2d85bf7f869296ba48ec6c05"
+        "size": 46158448,
+        "sig": "fdb34f593ec15d4da1321efcec60bd66010d24db580c1023907975e1f7354d1bba18ec6036dd8834b7371f39016f8aabffd72a183b47614dd0d27a8a2a6e410a"
       },
       "links": [
         {
