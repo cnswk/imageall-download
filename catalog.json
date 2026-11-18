@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.12",
-      "notes": "그림을 더 정확히 찾아요 — 새로 따는 그림은 색·밝기도 봐서, 창 뒤에 어둡게 깔린 버튼이나 색만 다른 버튼(못 누르는 회색 버튼)을 누르지 않아요(편집 창 '같은 그림' 칸에서 끌 수 있어요). '녹화한 자리만'은 버튼이 1~2픽셀 흔들려도 찾아요. 옛 작업은 그대로예요. 지난 판: 게임기 연결 지키기·[사람처럼] 다듬기.",
+      "version": "0.3.13",
+      "notes": "그림을 딸 때 할 일을 바로 골라요 — 네모를 그린 뒤 [길게 누르기]·[끌기](끌 길을 그려요)·[키 누르기]·[휠]을 고를 수 있고, 녹화 편집의 [단계 추가]·[다시 찍기]에도 [클릭 위치]·[찾을 범위]가 생겼어요. '누를 곳도 그림 따라가기'를 켜면 그림이 다른 자리에 나왔을 때 그 옆 같은 자리를 눌러요. 지난 판: 색·밝기 확인·게임기 연결 지키기.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.12/imageall2-0.3.12.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.13/imageall2-0.3.13.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 46100268,
-        "sig": "f2afa28edf4ff6d1a3fdb3e6b78d58819ec48d488f0750e1ca6b606693ad593ebd8ca1ca25ce15f732830d17fa188d547711f30c7daf61416dd66e4a8ab0ca06"
+        "size": 46102824,
+        "sig": "08b88c9f23c8922fb39c18735d3f1612aca80b4612e4a72caffc4902e2bbf77a0fa095a242f58ab33f495981e948c7c8c5f425f8079d53cf066bc87148f41605"
       },
       "links": [
         {
