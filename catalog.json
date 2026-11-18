@@ -6,19 +6,19 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.20",
-      "notes": "오른쪽 칸에서 녹화 목록만 굴러가요 — 위쪽 작업 구역과 '녹화 목록' 제목 줄, 아래 실행 칸은 제자리에 있어요. 작업 구역 아래 설명 글은 [3분] 옆 ? 단추에 마우스를 올리면 보여요(화면 설정이 다를 때의 빨간 안내는 그대로 떠요). 지난 판: 알맞은 크기로 켜기·크기 기억·좁히면 한 칸 모양·단추 자리와 크기 정리.",
+      "version": "0.3.21",
+      "notes": "아이콘이 새로 바뀌었어요(파란 꺾쇠 + 흰 세모). 창 제목과 화면의 '시험판' 글자를 뺐고, 창 제목 줄이 윈도우 테마와 상관없이 늘 어둡게 나와요. 지난 판: 오른쪽 칸에서 녹화 목록만 굴리기·설명 글은 ? 단추로.",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.20/imageall2-0.3.20.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.21/imageall2-0.3.21.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary"
         ],
-        "size": 46155935,
-        "sig": "2251bc705dcabdf2c412bb2a09ca0ae2cb9bf05d8883f3196a9d5a6cca72093294b5f450c1efc879723980b63d6c5951829604484baac2065fbf4e72dceb0101"
+        "size": 46166046,
+        "sig": "0c28aeacd8a1e4074636a85a02f20299230ab5a48acb2f2a1d4375b136122dabbe518a3337cc02251ef836330e28d43be1b8e0e42140830719713a38d9249d0b"
       },
       "links": [
         {
@@ -31,8 +31,8 @@
         }
       ],
       "icon": {
-        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/imageall2_icon.png",
-        "sig": "fe3dcd8201585ed153d89f33c0c43d95969e551fd97cfe8ed5f5911fc9f56d9ade8ce69f5eaf10313b6516015a15102a86746956769d0b6b0ef81cf6ca4ea206"
+        "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/imageall2_icon_v2.png",
+        "sig": "0763c1aba7c7eb3e881dbfbbe6013325bea5cbe7ef4919513f41aa7ffb4814579a0c57779f7fbfab3e5c7337985597ad7e8a4293585b1ecd1e5ddf5a201be70a"
       },
       "banner": {
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/imageall2_banner.png",
