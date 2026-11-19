@@ -42,6 +42,11 @@
       "notices": [
         {
           "date": "2026-11-19",
+          "title": "MoaWing 런처 0.9.5 — 확장 프로그램 넣기가 쉬워졌어요",
+          "body": "• 쓰는 브라우저(크롬·엣지·웨일·브레이브)의 '확장 프로그램' 화면이 열려요.\n• 탐색기에 설치 폴더가 파랗게 골라진 채로 열려요 — [개발자 모드]를 켜고 그 폴더를 확장 프로그램 화면에 끌어다 놓으면 끝이에요.\n• 끌어다 놓기가 안 되면 [압축해제된 확장 프로그램을 로드합니다]를 누르고 그 폴더를 고르면 돼요."
+        },
+        {
+          "date": "2026-11-19",
           "title": "MoaWing 런처 0.9.4 — 모아윙 웹페이지",
           "body": "• 웹페이지 맨 앞에 '모아윙 웹페이지'가 생겼어요. 런처를 소개하고 내려받는 페이지예요 — 다른 사람에게 알려 줄 때 이 주소를 보내 주세요.\n• 런처 화면 위쪽 이름이 한글 '모아윙'으로 바뀌었어요."
         },
@@ -764,9 +769,9 @@
     }
   ],
   "launcher": {
-    "version": "0.9.4",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.4/MoaWingLauncher.exe",
-    "size": 9246720,
-    "sig": "1593002a040f6638aa737615eaa8c373938aee936cffb5b18079d2d2b70531140804980f9dea059ef4fa3dd7e4d58e65e524e66209a0942f31263de9e4f44f03"
+    "version": "0.9.5",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.5/MoaWingLauncher.exe",
+    "size": 9259520,
+    "sig": "869604f03c8bf9d3ffd41d4b70174a458dee0f5afd09bb18ec1bfa81ec92fe024971b6cabebb1fea2810ed9c773f2e732ff46f483c843d69415e6c2222f4010a"
   }
 }
