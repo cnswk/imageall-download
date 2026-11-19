@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이디 만들기</title>
+<style>
+  :root { --bg:#15171c; --panel:#1c1f25; --card:#23272f; --line:#333944; --text:#e4e7ed; --sub:#9aa3b2; --accent:#4f8cff; --good:#34d399; --warn:#f5a623; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--text); font-family:"Malgun Gothic","맑은 고딕",system-ui,sans-serif; font-size:14px; }
+  body { padding:12px 16px 16px; max-width:560px; margin:0 auto; }
+  h1 { font-size:17px; margin:0 0 2px; }
+  .hint { color:var(--sub); font-size:12.5px; margin:0 0 10px; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:8px; }
+  label { color:var(--sub); font-size:12.5px; }
+  select, input[type=number], textarea { background:var(--card); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; font:inherit; }
+  input[type=number] { width:64px; }
+  textarea { width:100%; min-height:70px; resize:vertical; }
+  button { background:var(--card); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 12px; font:inherit; cursor:pointer; }
+  button:hover { border-color:#545c6a; background:#2a2f38; }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; }
+  button.primary:hover { filter:brightness(1.08); }
+  button:disabled { opacity:.5; cursor:default; }
+  .stats { color:var(--sub); font-size:12.5px; margin:6px 0; }
+  .stats b { color:var(--text); }
+  #msg { min-height:18px; font-size:12.5px; color:var(--good); margin:4px 0 8px; }
+  #msg.warn { color:var(--warn); }
+  #list { display:grid; grid-template-columns:repeat(auto-fill, minmax(104px, 1fr)); gap:6px; }
+  .id { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:8px 6px; text-align:center; cursor:pointer; font-size:15px; user-select:none; }
+  .id:hover { border-color:var(--accent); }
+  .id.copied { color:var(--sub); border-style:dashed; text-decoration:line-through; }
+  .id.now { border-color:var(--good); color:var(--good); text-decoration:none; }
+  details { margin:10px 0; border:1px solid var(--line); border-radius:6px; padding:6px 10px; background:var(--panel); }
+  summary { cursor:pointer; color:var(--sub); font-size:12.5px; }
+  .empty { color:var(--sub); padding:18px 0; text-align:center; grid-column:1 / -1; }
+</style>
+</head>
+<body>
+<h1>아이디 만들기</h1>
+<p class="hint">한글 아이디를 만들어 드려요. 아이디를 누르면 복사돼요 — 게임에 붙여 넣으세요. 복사한 것은 줄이 그어져요.</p>
+
+<div class="row">
+  <label for="theme">분위기</label>
+  <select id="theme">
+    <option value="all">전체</option>
+    <option value="nature">자연·감성</option>
+    <option value="fantasy">판타지·전사</option>
+    <option value="cute">동물·귀여움</option>
+  </select>
+  <label for="lenMin">글자 수</label>
+  <input id="lenMin" type="number" min="1" max="5" value="2"> ~
+  <input id="lenMax" type="number" min="1" max="5" value="5">
+</div>
+<div class="row">
+  <label for="count">개수</label>
+  <input id="count" type="number" min="1" max="1000" value="30">
+  <button id="issue" class="primary" type="button">만들기</button>
+  <button id="copyLeft" type="button" title="아직 복사 안 한 아이디를 한 줄에 하나씩 모두 복사해요">남은 것 모두 복사</button>
+  <button id="clear" type="button" title="만든 아이디 목록을 비워요(제외 목록은 그대로)">목록 비우기</button>
+</div>
+
+<div class="stats" id="stats"></div>
+<div id="msg" role="status" aria-live="polite"></div>
+<div id="list"></div>
+
+<details>
+  <summary>제외 목록 — 이미 쓴 아이디·쓰기 싫은 아이디(만들 때 빼요)</summary>
+  <p class="hint" style="margin-top:8px">한 줄에 하나씩, 또는 쉼표로 나눠 적으세요. 이 브라우저에만 저장돼요.</p>
+  <textarea id="excluded" spellcheck="false" placeholder="달빛여우&#10;별빛토끼"></textarea>
+</details>
+<p class="hint">만든 목록과 설정은 이 컴퓨터의 이 브라우저에만 저장돼요(다른 곳으로 보내지 않아요).</p>
+
+<script id="engine">
+// 아이디 조합 규칙 — ImageAll 1의 '한글 아이디 발급기'(NicknameService.cs)와 같다.
+// 조합 수(전체 분위기): 1자 63 · 2자 1,706 · 3자 6,725 · 4자 10,753 · 5자 7,946.
+const DICT = {
+  block: ["운영자","관리자","공지","이벤트","고객센","시발","씨발","병신","새끼","존나","좆","걸레"],
+  themes: {
+    nature: {
+      solo1: ["달","별","밤","봄","눈","불","물","해","산","숲","강","꽃","빛","꿈","들","섬","샘","늪","돌","잎","범","곰","학","용","새","매","뱀","길","흙","옥"],
+      pre1: ["달","별","밤","봄","눈","불","물","해","산","숲","강","꽃","빛","꿈","들","섬","샘","돌","흙","옥"],
+      pre2: ["달빛","별빛","햇빛","새벽","노을","구름","바람","안개","서리","이슬","은하","하늘","파도","모래","저녁","아침","겨울","여름","가을","봄날","눈꽃","불꽃","물결","초원","고요","첫눈","그늘","여울","개울","단풍","억새","갈대","대숲","솔숲","연꽃","매화","국화","난초","청산","백사"],
+      pre3: ["무지개","반딧불","소나기","민들레","진달래","개나리","봉숭아","살구꽃","밤하늘","새벽별","저녁놀","은하수","물보라","눈보라","옹달샘","오솔길"],
+      suf1: ["범","곰","학","용","새","별","꽃","빛","잎","섬","샘","늪","숲","돌","비","매","뱀","길"],
+      suf2: ["여우","늑대","토끼","사슴","나비","참새","까치","잉어","고래","수달","담비","표범","거북","오리","백조","물개","여치","등불","촛불","방울","부채","비녀","향로","나루","언덕","벼랑","물길","바위"],
+      suf3: ["고양이","다람쥐","두더지","호랑이","부엉이","올빼미","갈매기","병아리","두루미","물총새","너구리","오소리","살쾡이","도롱뇽","개구리","소쩍새","뻐꾸기","원앙새","반딧불","잠자리","미나리","도라지","억새풀","나뭇잎"]
+    },
+    fantasy: {
+      solo1: ["검","창","칼","활","왕","용","혼","귀","영","성","진","문","탑","별","신","마","뇌","화","빙","흑","백","청","적","은","금"],
+      pre1: ["흑","백","청","적","은","금","신","마","광","뇌","화","빙"],
+      pre2: ["심연","폭풍","천둥","번개","어둠","백야","강철","무쇠","청동","백금","흑요","수정","유리","비단","명주","진주","호박","산호","파멸","침묵","망각","영원","서약","계약","봉인","낙원","유적","폐허","신전","왕좌"],
+      pre3: ["그림자","새벽녘","잿빛불","은빛달","검은별","붉은눈","푸른늪","서리꽃","황혼빛","흰서리"],
+      suf1: ["검","창","칼","활","궁","도","왕","용","혼","귀","영","성","진","문","탑","별"],
+      suf2: ["무사","도령","낭자","도사","선비","장군","궁수","광대","악사","상인","검사","기사","마녀","요정","정령","유령","검객","협객","낭인","무녀","신관","술사","현자","은자","장검","단검","화살","방패","갑옷","깃발","가면","족자","왕관","인장"],
+      suf3: ["나그네","방랑자","수호자","추적자","사냥꾼","심마니","도깨비","파수꾼","이방인","계승자","관측자","침묵자","개척자","순례자","조율자","각성자"]
+    },
+    cute: {
+      solo1: ["곰","냥","멍","톨","알","별","꽃","빵","떡","콩","꿀","밤","팥","솜","왕"],
+      pre1: ["꿀","콩","밤","팥","떡","별","빵","솜","알","왕"],
+      pre2: ["딸기","포도","참외","수박","감귤","젤리","사탕","방울","구슬","꼬마","아기","콩알","밤톨","솜털","보리","모찌","크림","우유","초코","버터"],
+      pre3: ["솜사탕","복숭아","도토리","알사탕","눈사람","꿀단지","초코칩","옥수수","딸기잼","바닐라"],
+      suf1: ["곰","냥","멍","톨","알","별","꽃","빵","떡","콩"],
+      suf2: ["여우","토끼","사슴","나비","하마","판다","젤리","사탕","쿠키","푸딩","도넛","인형","방울","구름","별님","달님","꼬물","뭉치","단추","양말","모자","솜씨"],
+      suf3: ["고양이","다람쥐","병아리","강아지","햄스터","부엉이","너구리","코알라","두더지","도토리","젤리곰","곰인형","토끼풀","민들레","개구리","올챙이","애벌레","방울꽃","물방울","꼬맹이","솜뭉치","눈사람","별사탕","꿀떡이"]
+    }
+  }
+};
+const THEME_KEYS = ["all", "nature", "fantasy", "cute"];
+
+// '전체'는 세 분위기의 낱말을 차례로 합친다(겹치는 낱말은 처음 것만).
+function bankFor(theme, side, len) {
+  const keys = theme === "all" ? ["nature", "fantasy", "cute"] : [theme];
+  const seen = new Set(), list = [];
+  for (const k of keys) {
+    const arr = (DICT.themes[k] || {})[side + len];
+    if (!arr) continue;
+    for (const w of arr) if (w && !seen.has(w)) { seen.add(w); list.push(w); }
+  }
+  return list;
+}
+// 완성형 한글(가~힣)만인가.
+function isHangul(s) {
+  if (!s) return false;
+  for (const c of s) if (c < "가" || c > "힣") return false;
+  return true;
+}
+// 조합 풀: 그 자체로 쓰는 낱말 + (앞말+뒷말). 앞말==뒷말·앞말 끝글자==뒷말 첫글자·금칙어는 뺀다.
+function buildPool(theme, lenMin, lenMax) {
+  if (!THEME_KEYS.includes(theme)) theme = "all";
+  lenMin = Math.max(1, lenMin | 0); lenMax = Math.min(5, lenMax | 0);
+  if (lenMin > lenMax) [lenMin, lenMax] = [lenMax, lenMin];
+  const pool = [], seen = new Set();
+  const push = (n, len) => {
+    if (n.length !== len || seen.has(n)) return;
+    if (!isHangul(n)) return;
+    seen.add(n);
+    for (const b of DICT.block) if (b && n.includes(b)) return;
+    pool.push(n);
+  };
+  for (let total = lenMin; total <= lenMax; total++) {
+    const solos = total === 1 ? bankFor(theme, "solo", 1) : bankFor(theme, "pre", total).concat(bankFor(theme, "suf", total));
+    for (const w of solos) push(w, total);
+    for (let p = 1; p <= 3; p++) {
+      const s = total - p;
+      if (s < 1 || s > 3) continue;
+      const a = bankFor(theme, "pre", p), b = bankFor(theme, "suf", s);
+      for (const x of a) for (const y of b) {
+        if (x === y) continue;
+        if (x[x.length - 1] === y[0]) continue;
+        push(x + y, total);
+      }
+    }
+  }
+  return pool;
+}
+// 제외 목록 읽기 — 줄 바꿈·쉼표·탭으로 나눈다.
+function parseExclusions(raw) {
+  const out = [], seen = new Set();
+  for (const part of String(raw || "").split(/[\n\r,\t]/)) {
+    const s = part.trim();
+    if (s && !seen.has(s)) { seen.add(s); out.push(s); }
+  }
+  return out;
+}
+// 풀을 섞어서 제외할 것을 빼고 want개를 뽑는다.
+function pick(pool, exclude, want, rnd) {
+  const arr = pool.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  const picked = [];
+  for (const n of arr) {
+    if (picked.length >= want) break;
+    if (!exclude.has(n)) picked.push(n);
+  }
+  return picked;
+}
+if (typeof module !== "undefined") module.exports = { buildPool, parseExclusions, pick, bankFor, isHangul };
+</script>
+
+<script>
+(function () {
+  "use strict";
+  const KEY = "moawing-id-maker-v1";
+  const $ = (id) => document.getElementById(id);
+  const el = { theme: $("theme"), lenMin: $("lenMin"), lenMax: $("lenMax"), count: $("count"), issue: $("issue"), copyLeft: $("copyLeft"), clear: $("clear"), stats: $("stats"), msg: $("msg"), list: $("list"), excluded: $("excluded") };
+  // 상태: 만든 아이디들 [{name, copied}] + 설정. 브라우저에만 저장한다(읽을 때 모양을 검사한다).
+  let state = { theme: "all", lenMin: 2, lenMax: 5, count: 30, excluded: "", names: [] };
+  let lastCopied = "";
+
+  function load() {
+    try {
+      const d = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (!d || typeof d !== "object") return;
+      const int = (v, lo, hi, def) => (Number.isInteger(v) && v >= lo && v <= hi ? v : def);
+      state.theme = THEME_KEYS.includes(d.theme) ? d.theme : "all";
+      state.lenMin = int(d.lenMin, 1, 5, 2);
+      state.lenMax = int(d.lenMax, 1, 5, 5);
+      state.count = int(d.count, 1, 1000, 30);
+      state.excluded = typeof d.excluded === "string" ? d.excluded.slice(0, 20000) : "";
+      state.names = Array.isArray(d.names) ? d.names.filter((n) => n && typeof n.name === "string" && isHangul(n.name) && n.name.length <= 5).slice(0, 5000).map((n) => ({ name: n.name, copied: n.copied === true })) : [];
+    } catch (e) { /* 저장된 것이 깨졌으면 처음 상태로 */ }
+  }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch (e) { say("이 브라우저에 저장하지 못했어요 — 창을 닫으면 목록이 사라져요.", true); }
+  }
+  function say(text, warn) { el.msg.textContent = text; el.msg.className = warn ? "warn" : ""; }
+
+  function render() {
+    const copied = state.names.filter((n) => n.copied).length;
+    el.stats.textContent = "";
+    for (const [label, value] of [["만든 것 ", state.names.length], [" · 복사한 것 ", copied], [" · 남은 것 ", state.names.length - copied]]) {
+      el.stats.append(label);
+      const b = document.createElement("b"); b.textContent = String(value); el.stats.append(b);
+    }
+    el.list.textContent = "";
+    if (state.names.length === 0) {
+      const e = document.createElement("div"); e.className = "empty"; e.textContent = "아직 만든 아이디가 없어요 — [만들기]를 눌러 주세요."; el.list.append(e);
+    }
+    state.names.forEach((n, i) => {
+      const d = document.createElement("button");
+      d.type = "button";
+      d.className = "id" + (n.copied ? " copied" : "") + (n.name === lastCopied ? " now" : "");
+      d.textContent = n.name;
+      d.title = n.copied ? "복사했던 아이디예요 — 누르면 다시 복사해요" : "누르면 복사해요";
+      d.addEventListener("click", () => copyOne(i));
+      el.list.append(d);
+    });
+    el.copyLeft.disabled = state.names.length === copied;
+    el.clear.disabled = state.names.length === 0;
+  }
+
+  async function toClipboard(text) {
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch (e) {
+      // 권한이 없으면 예전 방법으로 한 번 더
+      const t = document.createElement("textarea"); t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.append(t); t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (e2) { ok = false; }
+      t.remove(); return ok;
+    }
+  }
+  async function copyOne(i) {
+    const n = state.names[i]; if (!n) return;
+    if (await toClipboard(n.name)) { n.copied = true; lastCopied = n.name; save(); render(); say("'" + n.name + "' 복사했어요 — 게임에 붙여 넣으세요(Ctrl+V)."); }
+    else say("복사하지 못했어요 — 아이디를 직접 골라 복사해 주세요.", true);
+  }
+  async function copyLeft() {
+    const left = state.names.filter((n) => !n.copied).map((n) => n.name);
+    if (left.length === 0) return;
+    if (await toClipboard(left.join("\n"))) say("남은 아이디 " + left.length + "개를 한 줄에 하나씩 복사했어요.");
+    else say("복사하지 못했어요.", true);
+  }
+
+  function issue() {
+    const num = (inp, lo, hi, def) => { const v = parseInt(inp.value, 10); return Number.isInteger(v) ? Math.min(hi, Math.max(lo, v)) : def; };
+    let lenMin = num(el.lenMin, 1, 5, 2), lenMax = num(el.lenMax, 1, 5, 5);
+    if (lenMin > lenMax) [lenMin, lenMax] = [lenMax, lenMin];
+    const want = num(el.count, 1, 1000, 30);
+    Object.assign(state, { theme: THEME_KEYS.includes(el.theme.value) ? el.theme.value : "all", lenMin, lenMax, count: want, excluded: el.excluded.value.slice(0, 20000) });
+    el.lenMin.value = lenMin; el.lenMax.value = lenMax; el.count.value = want;
+    const pool = buildPool(state.theme, lenMin, lenMax);
+    const exclude = new Set(parseExclusions(state.excluded).concat(state.names.map((n) => n.name)));
+    const got = pick(pool, exclude, want, Math.random);
+    state.names = state.names.concat(got.map((name) => ({ name, copied: false })));
+    save(); render();
+    if (got.length < want) say("이 설정으로는 " + got.length + "개만 더 만들 수 있었어요(조합 " + pool.length.toLocaleString("ko-KR") + "가지 중 남은 것) — 글자 수를 넓히거나 분위기를 '전체'로 바꿔 보세요.", true);
+    else say(got.length + "개 만들었어요 — 누르면 복사돼요.");
+  }
+  function clearAll() {
+    if (state.names.length === 0) return;
+    if (!window.confirm("만든 아이디 " + state.names.length + "개를 모두 지울까요? (제외 목록은 그대로예요)")) return;
+    state.names = []; lastCopied = ""; save(); render(); say("목록을 비웠어요.");
+  }
+
+  load();
+  el.theme.value = state.theme; el.lenMin.value = state.lenMin; el.lenMax.value = state.lenMax; el.count.value = state.count; el.excluded.value = state.excluded;
+  el.issue.addEventListener("click", issue);
+  el.copyLeft.addEventListener("click", copyLeft);
+  el.clear.addEventListener("click", clearAll);
+  el.excluded.addEventListener("change", () => { state.excluded = el.excluded.value.slice(0, 20000); save(); });
+  render();
+})();
+</script>
+</body>
+</html>
