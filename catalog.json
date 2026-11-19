@@ -6,20 +6,20 @@
       "name": "ImageAll 2",
       "summary": "녹화 한 번이면 그림 매크로 완성",
       "description": "LDPlayer(안드로이드) 게임과 PC 게임 창 자동화.\n\n녹화 버튼을 누르고 평소처럼 게임을 하면, 누른 버튼마다 그림이 찍혀서 그림 매크로가 만들어져요.\n실행하면 녹화한 그림이 보일 때마다 그 단계부터 순서대로 해요.\n\n• 여러 게임기 동시 실행\n• 멈추면 다시 켜기(게임·LDPlayer)\n• 녹화 목록 폴더 정리\n• 다음 그림 나올 때까지 계속 누르기",
-      "version": "0.3.24",
-      "notes": "녹화 목록을 탐색기처럼 — 줄을 누르면 고르기(Ctrl = 하나씩, Shift = 거기까지), 두 번 누르면 편집 창. 고른 줄 중 하나를 끌면 모두 같이 옮겨지고(줄 어디를 잡아도 끌려요), 목록 위 막대에서 [폴더로]·[켜기]·[끄기]·[지우기]를 한꺼번에 할 수 있어요. 폴더도 왼쪽 손잡이를 끌어 위아래로 옮겨요. 옮기거나 지운 뒤 20초 동안 [되돌리기]. 지난 판: 만들어 둔 작업이 같이 와요([작업 고르기]).",
+      "version": "0.3.25",
+      "notes": "누를 곳 그리기가 쉬워졌어요 — 게임 화면에 노란 네모(① 찾는 그림)와 초록 네모(② 누를 곳)가 이름표와 함께 보이고, 누를 자리를 한 번만 눌러도 네모가 잡혀요. 따는 화면 단추는 '그림 누르기 / 다른 곳 누르기 / 누르기 말고 다른 일'로 묶었어요. 백신 검사 제외는 등록한 뒤 다시 확인해서 [멀티 최적 설정…] → [컴퓨터 점검…]에 '등록 완료 / 등록 안 됨'으로 보여 줘요. 지난 판: 녹화 목록을 탐색기처럼(누르면 고르기 · Ctrl·Shift로 여러 줄 · 끌어서 한꺼번에 옮기기 · 되돌리기).",
       "exe": "ImageAll2.exe",
       "default_dir": "C:\\ImageAll2",
       "package": {
-        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.24/imageall2-0.3.24.zip",
+        "url": "https://github.com/cnswk/imageall-download/releases/download/imageall2-0.3.25/imageall2-0.3.25.zip",
         "roots": [
           "ImageAll2.exe",
           "maa",
           "MaaAgentBinary",
           "shared_works"
         ],
-        "size": 46701372,
-        "sig": "16b9c5a8cc589d8cb627574fd015df52fe67d0a83929ae9524c2ded34f01fe7612bbbefe934c0493945a39d7fa6766d955746a2bba3e242bef50ee694c054307"
+        "size": 46714910,
+        "sig": "11df0358f67801fd8300e65991fd37002f82d3cdbfcd8b18cfef33113196a6012bf12d221f6397542e4a9409a7412c33d70d962ac8936a92375982d7de7f2106"
       },
       "links": [
         {
