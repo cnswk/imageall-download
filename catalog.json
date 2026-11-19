@@ -522,7 +522,7 @@
   "items": [
     {
       "id": "moawing-home",
-      "name": "모아윙 웹페이지",
+      "name": "모아윙 런처 웹페이지",
       "summary": "런처 소개·내려받기 — 공유용",
       "description": "모아윙 런처를 소개하고 내려받는 웹페이지예요.\n\n다른 사람에게 알려 줄 때 이 주소를 보내 주세요:\nhttps://cnswk.github.io/imageall-download/\n\n[열기]를 누르면 브라우저로 열려요 — 주소창의 주소를 복사해서 공유하면 돼요.",
       "section": "웹페이지",
@@ -567,6 +567,15 @@
         480,
         780
       ]
+    },
+    {
+      "id": "gukmin-seosik",
+      "name": "국민서식",
+      "summary": "정부·공공기관 서식을 쉽게",
+      "description": "정부·공공기관 서식을 초보자도 쉽게 찾고, 보고, 받고, 작성하게 돕는 웹페이지예요.\n\n[열기]를 누르면 브라우저로 열려요(설치 없음).",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://gukmin-seosik.gukminform.workers.dev/"
     },
     {
       "id": "moawing-ai",
