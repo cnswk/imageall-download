@@ -42,6 +42,11 @@
       "notices": [
         {
           "date": "2026-11-19",
+          "title": "MoaWing 런처 0.9.6 — 확장 프로그램 화면이 안 열리던 것 고침",
+          "body": "• [○○에 넣기]를 눌러도 '확장 프로그램' 화면이 안 열리고 '새 탭'이나 '사용자 선택' 화면이 뜨던 것을 고쳤어요.\n• 이제 마지막으로 쓴 브라우저 사용자로 새 창을 열고, 주소창에 확장 프로그램 주소를 넣어 드려요. 누른 뒤 1~2초는 키보드·마우스를 놓아 주세요.\n• 화면이 안 바뀌면 그 창 주소창을 누르고 Ctrl+V → Enter 하면 돼요(주소를 복사해 둬요)."
+        },
+        {
+          "date": "2026-11-19",
           "title": "MoaWing 런처 0.9.5 — 확장 프로그램 넣기가 쉬워졌어요",
           "body": "• 쓰는 브라우저(크롬·엣지·웨일·브레이브)의 '확장 프로그램' 화면이 열려요.\n• 탐색기에 설치 폴더가 파랗게 골라진 채로 열려요 — [개발자 모드]를 켜고 그 폴더를 확장 프로그램 화면에 끌어다 놓으면 끝이에요.\n• 끌어다 놓기가 안 되면 [압축해제된 확장 프로그램을 로드합니다]를 누르고 그 폴더를 고르면 돼요."
         },
@@ -769,9 +774,9 @@
     }
   ],
   "launcher": {
-    "version": "0.9.5",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.5/MoaWingLauncher.exe",
-    "size": 9259520,
-    "sig": "869604f03c8bf9d3ffd41d4b70174a458dee0f5afd09bb18ec1bfa81ec92fe024971b6cabebb1fea2810ed9c773f2e732ff46f483c843d69415e6c2222f4010a"
+    "version": "0.9.6",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.6/MoaWingLauncher.exe",
+    "size": 9294848,
+    "sig": "83a52704db4f079ac9e006d55f283ccd9713e0fc2757b9b773fc2b86901072f545d098640ef597417e7d7aa893718dbabdff3b4126c4d247e964d44b16e4a302"
   }
 }
