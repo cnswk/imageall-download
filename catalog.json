@@ -42,6 +42,11 @@
       "notices": [
         {
           "date": "2026-11-19",
+          "title": "MoaWing 런처 0.9.3 — 아이디 만들기 · LD플레이어 · MuMu",
+          "body": "• 웹페이지에 '아이디 만들기'가 생겼어요. [열기]를 누르면 게임 옆에 두고 쓰기 좋은 작은 창으로 떠요 — 한글 아이디를 만들고, 누르면 복사돼요.\n• 다른 프로그램에 LD플레이어와 MuMu 앱플레이어가 생겼어요(깔려 있으면 [실행], 없으면 공식 홈페이지에서 받기).\n• 텔레그램 아래에 [MoaWing 텔레그램 방]으로 들어가는 길이 생겼어요."
+        },
+        {
+          "date": "2026-11-19",
           "title": "MoaWing 런처 0.9.2 — 런처 업데이트가 막히던 것 고침",
           "body": "• 런처를 트레이에 띄워 둔 채로는 '런처를 업데이트하지 못했어요 — 액세스가 거부되었습니다'로 막히던 것을 고쳤어요.\n• 지금 이 글이 뜨는데 런처가 업데이트되지 않으면: 오른쪽 아래 트레이의 런처를 오른쪽 클릭 → 끄기로 끈 다음 런처를 다시 켜 주세요(이번 한 번만)."
         },
@@ -537,6 +542,19 @@
       }
     },
     {
+      "id": "id-maker",
+      "name": "아이디 만들기",
+      "summary": "한글 아이디를 만들어 복사",
+      "description": "게임 캐릭터 이름으로 쓸 한글 아이디를 만들어 줘요(ImageAll 1의 아이디 만들기와 같은 규칙).\n\n• 분위기(자연·판타지·귀여움)와 글자 수(1~5자)를 고르고 [만들기]\n• 아이디를 누르면 복사돼요 — 게임에 붙여 넣으세요\n• 복사한 것은 줄이 그어져서 겹치지 않아요\n• 이미 쓴 아이디는 제외 목록에 적어 두면 다시 안 나와요\n\n[열기]를 누르면 게임 옆에 두고 쓰기 좋은 작은 창으로 떠요(설치 없음).",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://cnswk.github.io/imageall-download/docs/id/",
+      "window": [
+        480,
+        780
+      ]
+    },
+    {
       "id": "moawing-ai",
       "name": "MoaWing AI",
       "summary": "AI 글쓰기 보조 사이드패널",
@@ -658,16 +676,54 @@
       "default_dir": "C:\\MoaWingExtensions\\max-radar-ai"
     },
     {
+      "id": "ldplayer",
+      "name": "LD플레이어",
+      "summary": "안드로이드 앱플레이어",
+      "description": "PC에서 안드로이드 게임을 돌리는 앱플레이어예요. ImageAll 2가 이 게임기를 찾아서 써요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 멀티 플레이어(게임기 관리 창)를 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 LD플레이어가 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://kr.ldplayer.net/",
+      "exe_paths": [
+        "C:\\LDPlayer\\LDPlayer14\\dnmultiplayer.exe",
+        "C:\\LDPlayer\\LDPlayer9\\dnmultiplayer.exe",
+        "%ProgramFiles%\\LDPlayer\\LDPlayer14\\dnmultiplayer.exe",
+        "%ProgramFiles%\\LDPlayer\\LDPlayer9\\dnmultiplayer.exe",
+        "D:\\LDPlayer\\LDPlayer14\\dnmultiplayer.exe",
+        "D:\\LDPlayer\\LDPlayer9\\dnmultiplayer.exe"
+      ]
+    },
+    {
+      "id": "mumuplayer",
+      "name": "MuMu 앱플레이어",
+      "summary": "안드로이드 앱플레이어",
+      "description": "PC에서 안드로이드 게임을 돌리는 앱플레이어예요. ImageAll 2가 이 게임기를 찾아서 써요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 MuMu가 알아서 해요.",
+      "section": "다른 프로그램",
+      "kind": "external",
+      "url": "https://www.mumuplayer.com/kr/",
+      "exe_paths": [
+        "%ProgramFiles%\\Netease\\MuMuPlayer\\nx_main\\MuMuNxMain.exe",
+        "%ProgramFiles%\\Netease\\MuMuPlayer-12.0\\shell\\MuMuPlayer.exe",
+        "%ProgramFiles%\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe",
+        "%ProgramFiles%\\Netease\\MuMu Player 12\\shell\\MuMuPlayer.exe"
+      ]
+    },
+    {
       "id": "telegram",
       "name": "텔레그램",
       "summary": "메신저",
-      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.",
+      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.\n\n아래 [MoaWing 텔레그램 방]을 누르면 공식 방으로 들어가요(소식·질문).",
       "section": "다른 프로그램",
       "kind": "external",
       "url": "https://desktop.telegram.org/",
       "exe_paths": [
         "%APPDATA%\\Telegram Desktop\\Telegram.exe",
         "%LOCALAPPDATA%\\Programs\\Telegram Desktop\\Telegram.exe"
+      ],
+      "links": [
+        {
+          "label": "MoaWing 텔레그램 방",
+          "url": "https://t.me/ImageAll1"
+        }
       ]
     },
     {
@@ -685,9 +741,9 @@
     }
   ],
   "launcher": {
-    "version": "0.9.2",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.2/MoaWingLauncher.exe",
-    "size": 9244160,
-    "sig": "eca637cf931573dee3957cc96263a58be80cb7be3edc96aeb970e767b5cd27a97cb158d953c632cd1d59cf310b0af647066e8f1c0e72ef51ed54a3e10ea15809"
+    "version": "0.9.3",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.9.3/MoaWingLauncher.exe",
+    "size": 9248256,
+    "sig": "2b8888f5cce6ce6134f76ff494fabacc6a3318c116e697a54ae19bd8211974a34d0691663a4247fab698959d6dca1cbc7d43969c8baa1f9977c801f5c8dd150c"
   }
 }
