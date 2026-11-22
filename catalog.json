@@ -969,9 +969,9 @@
     }
   ],
   "launcher": {
-    "version": "0.10.9",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.10.9/MoaWingLauncher.exe",
-    "size": 9426944,
-    "sig": "70086018131322472804db20dc24904bab03f604353321a507b2e5edec633de2c4c26f7b3ef1f6b2c3f3178576ccf73465efb268ada870ae14923c385f9d8a0a"
+    "version": "0.10.10",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.10.10/MoaWingLauncher.exe",
+    "size": 9434112,
+    "sig": "faa23205676fadef0fc5af5657b49bdb45dd0e800a39efa3b7200429ea81be9e4c42dc22431a533f259494b0e8eb74d35dc2d9ab596df5ece13b91b56f13840f"
   }
 }
