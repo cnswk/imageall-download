@@ -846,6 +846,19 @@
   ],
   "items": [
     {
+      "id": "id-maker",
+      "name": "아이디 만들기",
+      "summary": "한글 아이디를 만들어 복사",
+      "description": "게임 캐릭터 이름으로 쓸 한글 아이디를 만들어 줘요(ImageAll 1의 아이디 만들기와 같은 규칙).\n\n• 분위기(자연·판타지·귀여움)와 글자 수(1~5자)를 고르고 [만들기]\n• 아이디를 누르면 복사돼요. 게임에 붙여 넣으세요\n• 복사한 것은 줄이 그어져서 겹치지 않아요\n• 이미 쓴 아이디는 제외 목록에 적어 두면 다시 안 나와요\n\n[열기]를 누르면 게임 옆에 두고 쓰기 좋은 작은 창으로 떠요(설치 없음).",
+      "section": "웹페이지",
+      "kind": "web",
+      "url": "https://cnswk.github.io/imageall-download/docs/id/",
+      "window": [
+        845,
+        730
+      ]
+    },
+    {
       "id": "moawing-home",
       "name": "모아윙 런처 웹페이지",
       "summary": "런처 소개·내려받기 · 공유용",
@@ -879,19 +892,6 @@
         "url": "https://raw.githubusercontent.com/cnswk/imageall-download/main/assets/max_radar_icon.png",
         "sig": "b6e79e78a528d837378a8a8990df2821c3c3af467f41001abf39735c8658b3fa87e849ab32c316d826b45c1bd1f35f4fd63877a43eb3751c5997917d5ca9a204"
       }
-    },
-    {
-      "id": "id-maker",
-      "name": "아이디 만들기",
-      "summary": "한글 아이디를 만들어 복사",
-      "description": "게임 캐릭터 이름으로 쓸 한글 아이디를 만들어 줘요(ImageAll 1의 아이디 만들기와 같은 규칙).\n\n• 분위기(자연·판타지·귀여움)와 글자 수(1~5자)를 고르고 [만들기]\n• 아이디를 누르면 복사돼요. 게임에 붙여 넣으세요\n• 복사한 것은 줄이 그어져서 겹치지 않아요\n• 이미 쓴 아이디는 제외 목록에 적어 두면 다시 안 나와요\n\n[열기]를 누르면 게임 옆에 두고 쓰기 좋은 작은 창으로 떠요(설치 없음).",
-      "section": "웹페이지",
-      "kind": "web",
-      "url": "https://cnswk.github.io/imageall-download/docs/id/",
-      "window": [
-        845,
-        730
-      ]
     },
     {
       "id": "gukmin-seosik",
@@ -1056,25 +1056,6 @@
       ]
     },
     {
-      "id": "telegram",
-      "name": "텔레그램",
-      "summary": "메신저",
-      "description": "텔레그램 PC 프로그램이에요.\n\n이 컴퓨터에 깔려 있으면 [실행]으로 바로 켜고, 없으면 [받으러 가기]로 공식 홈페이지에서 받아요.\n업데이트는 텔레그램이 알아서 해요.\n\n아래 [MoaWing 텔레그램 방]을 누르면 공식 방으로 들어가요(소식·질문).",
-      "section": "다른 프로그램",
-      "kind": "external",
-      "url": "https://desktop.telegram.org/",
-      "exe_paths": [
-        "%APPDATA%\\Telegram Desktop\\Telegram.exe",
-        "%LOCALAPPDATA%\\Programs\\Telegram Desktop\\Telegram.exe"
-      ],
-      "links": [
-        {
-          "label": "MoaWing 텔레그램 방",
-          "url": "https://t.me/ImageAll1"
-        }
-      ]
-    },
-    {
       "id": "kakaotalk",
       "name": "카카오톡",
       "summary": "메신저",
@@ -1088,10 +1069,28 @@
       ]
     }
   ],
+  "links": [
+    {
+      "name": "아이템베이",
+      "url": "https://www.itembay.com/",
+      "summary": "게임 아이템 거래"
+    },
+    {
+      "name": "바로템",
+      "url": "https://www.barotem.com/",
+      "summary": "게임 아이템 거래"
+    },
+    {
+      "name": "공식 텔레그램 방",
+      "url": "https://t.me/ImageAll1",
+      "summary": "모아윙 소식과 질문 · 텔레그램이 깔려 있으면 텔레그램으로 열려요",
+      "pin": true
+    }
+  ],
   "launcher": {
-    "version": "0.10.11",
-    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.10.11/MoaWingLauncher.exe",
-    "size": 9434624,
-    "sig": "7e5da451c6b2d88e474f18f00a1714262237cbf4e8fd94bab70b3239f515f92d9a14c7b0cc5afa1b9721dc3b7b81019a4db7a7dfa35cd28521111540b3832f0b"
+    "version": "0.10.12",
+    "url": "https://github.com/cnswk/imageall-download/releases/download/launcher-0.10.12/MoaWingLauncher.exe",
+    "size": 9467904,
+    "sig": "0a0f40c80a73897b725d552cc730cf989abbfe4f8cb858334dff0591dfa8d24cd9d7cf9af7700909c33fa77bd889b38a60976aca6291eabbe63a83fb00c6020c"
   }
 }
